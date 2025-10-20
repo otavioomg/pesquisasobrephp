@@ -1,0 +1,95 @@
+/* Alinhamento das imagens dos cards do grupo */
+.card-group .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Garantir que os cards tenham a mesma altura */
+.card-group .card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-group .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-group .card-text:last-child {
+    margin-top: auto;
+}
+
+footer {
+    background-color: #242424;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+}
+
+/* Correção do dropdown - mantém o fundo escuro no hover */
+.dropdown-menu {
+    background-color: #212529 !important;
+    border: 1px solid #495057;
+}
+
+.dropdown-item {
+    color: white !important;
+    background-color: transparent !important;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: #495057 !important;
+    color: white !important;
+}
+
+.dropdown-divider {
+    border-color: #495057;
+}
+
+/* Correção do posicionamento do dropdown */
+.dropdown-menu {
+    right: 0 !important;
+    left: auto !important;
+    transform: none !important;
+    position: absolute !important;
+    max-width: 200px;
+    min-width: 150px;
+}
+
+/* Para telas menores, ajustar o dropdown */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        right: 0 !important;
+        left: auto !important;
+        max-width: 180px;
+    }
+}
+
+/* ============================= */
+/* Overlay apenas no card Créditos */
+/* ============================= */
+#scrollspyHeading6 .card-img-overlay {
+    opacity: 0;
+    position: absolute;
+    color: #ffffff;
+}
+
+#scrollspyHeading6 .card-img-overlay:hover {
+    transition: opacity 0.3s;
+    opacity: 0.9;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#scrollspyHeading6 .card-img {
+    height: 400px;
+    object-fit: cover;
+}
+
+#scrollspyHeading6.card {
+    max-width: 18rem;
+    margin: 20px;
+}
